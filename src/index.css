@@ -9,8 +9,23 @@
 *:focus{
   outline: none;
 }
+html{
+  font-size: 20px;
+}
 body{
   margin: 0;
+}
+h1{
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+}
+h2{
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+h3{
+  font-size: clamp(0.8rem, 1.2vw, 1.25rem)
+}
+p{
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
 }
 #root{
     min-height: 100vh;
@@ -83,10 +98,16 @@ button{
 }
 .timer-box{
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .timer-bar-container{
   background-color: rgb(245, 217, 132);
-  width: 200px;
+  width: 70%;
+  max-width: 200px;
   height: 18px;
   border-radius: 12px;
   display: flex;
@@ -103,6 +124,7 @@ button{
 .timer{
   margin-bottom: 10px;
   text-align: center;
+  font-size: clamp(0.8rem, 1.25vw, 0.9rem);
 }
 .question-box{
   margin-bottom: 20px;
@@ -118,6 +140,9 @@ button{
 .trivia-answer input{
   margin-right: 20px;
   accent-color: #586651;
+}
+.trivia-answer label{
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 button.play-again, button.play{
   font-size: 20px;
@@ -149,6 +174,9 @@ button.play-again, button.play{
 .trivia-game-box button.show-next-page.hidden{
   visibility: hidden;
   pointer-events: none;
+}
+.trivia-answer-box .answer{
+  font-size: clamp(0.8rem, 1vw, 1.05rem)
 }
 .result-board{
   display: flex;
@@ -186,6 +214,11 @@ button.play-again, button.play{
   display: flex;
   align-items: center;
 }
+.trivia-result .svg-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .trivia-result svg{
   width: 20px;
   margin-right: 30px;
@@ -207,10 +240,13 @@ button.play-again, button.play{
 }
 @media screen and (max-width: 768px) {
   .trivia-game-box{
-    width: 90%;
+    width: 95%;
+  }
+  .trivia-game-box .content{
+    padding: 10px;
   }
   .trivia-result{
-    width: 90%;
+    width: 95%;
   }
   .question-info{
     flex-direction: column;
