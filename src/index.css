@@ -29,6 +29,7 @@ p{
 }
 #root{
     min-height: 100vh;
+    min-height: 100dvh;
     font-family: Inter;
     background-color: #B6CEB4;
     display: flex;
